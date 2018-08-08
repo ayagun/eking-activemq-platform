@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/fresh-bootstrap-table.css}">
+    <title>客户端管理</title>
+</head>
+<body>
+<!-- 导航条开始 -->
+<div id="myManu" ></div>
+<div class="container">
+   <div class="panel panel-default">
+       <div class="panel-body">
+           <!-- 按钮触发模态框 -->
+           <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal">添加用户</button>
+           <table id="table"></table>
+       </div>
+   </div>
+</div>
+<!-- 查询的模态对话框 -->
+<div id="addModal" class="modal fade"  role="dialog"   aria-hidden=true>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title">
+                    <i class="icon-pencil"></i>
+                    <span id="lblAddTitle" style="font-weight:bold">添加</span>
+                </h4>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <form  id ='addForm' class="bs-example bs-example-form" role = "form">
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">名称</i></span>
+                        <input type = "text" class=" form-control" name="userName" id="userName" placeholder="用户名称">
+                    </div>
+                    <div class = "input-group">
+                        <span class = "input-group-addon"><i class="icon-th">密码</i></span>
+                        <input type = "password" class = "form-control"  placeholder="密码" name="passwd" id="passwd">
+                    </div>
+
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">地址</i></span>
+                        <input type = "text"  class=" form-control" name="address" id="address" placeholder="地址">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th" >邮箱</i></span>
+                        <input type = "text"  class=" form-control" name="email" id="email"  placeholder="邮箱">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">电话</i></span>
+                        <input type = "text"  class=" form-control"  name="phone" id="phone"  placeholder="电话" >
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-info">
+                <button type="submit" class="btn btn-primary"  onclick =add()>确定</button>
+                <button type="button" class="btn green" data-dismiss="modal">取消</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 设置模态框（Modal） -->
+<div id="setModal" class="modal fade"  role="dialog"   aria-hidden=true>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title">
+                    <i class="icon-pencil"></i>
+                    <span style="font-weight:bold">设置权限</span>
+                </h4>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <form  id ='setForm' class="bs-example bs-example-form" role = "form">
+                    <div class="box">
+                        <ul class="list-group" id="queueList">
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-info">
+                <button type="submit" class="btn btn-primary"  onclick =set()>确定</button>
+                <button type="button" class="btn green" data-dismiss="modal">取消</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<script th:src="@{/static/js/bootstrap.js}"></script>
+<script th:src="@{/static/js/bootstrap-table.js}"></script>
+<script th:src="@{/static/js/common.js}"></script>
+<script th:src="@{/static/js/ituser.js}"></script>
+</html>

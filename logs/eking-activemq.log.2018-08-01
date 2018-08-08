@@ -1,0 +1,58 @@
+2018-08-01 14:25:13,294  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 12496 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-01 14:25:13,320  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-01 14:25:13,747  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-01 14:25:13,783  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@676c1e9b: startup date [Wed Aug 01 14:25:13 CST 2018]; root of context hierarchy
+2018-08-01 14:25:15,661  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6e672b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-01 14:25:16,115  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-01 14:25:16,262  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2484 ms
+2018-08-01 14:25:16,452  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-01 14:25:16,459  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-01 14:25:16,460  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-01 14:25:16,460  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-01 14:25:16,461  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-01 14:25:22,608  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-01 14:25:22,640  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-01 14:25:22,840  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-01 14:25:22,846  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-01 14:25:22,851  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-01 14:25:22,971  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-01 14:25:23,292  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-01 14:25:24,165  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-01 14:25:25,530  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@676c1e9b: startup date [Wed Aug 01 14:25:13 CST 2018]; root of context hierarchy
+2018-08-01 14:25:25,717  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-01 14:25:25,719  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-01 14:25:25,720  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-01 14:25:25,721  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-01 14:25:25,723  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-01 14:25:25,730  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-01 14:25:25,731  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-01 14:25:25,731  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-01 14:25:25,732  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-01 14:25:25,733  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-01 14:25:25,747  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-01 14:25:25,748  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-01 14:25:25,752  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-01 14:25:25,752  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-01 14:25:25,755  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-01 14:25:25,756  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-01 14:25:25,756  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-01 14:25:25,757  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-01 14:25:25,757  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-01 14:25:25,766  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-01 14:25:25,767  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-01 14:25:25,767  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-01 14:25:25,768  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-01 14:25:25,771  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-01 14:25:25,772  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-01 14:25:25,842  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 14:25:25,842  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 14:25:25,913  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 14:25:26,009  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-01 14:25:26,920  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-01 14:25:27,067  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-01 14:25:27,244  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-01 14:25:27,252  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 14.59 seconds (JVM running for 17.636)
+2018-08-01 14:25:33,006  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-01 14:25:33,067  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 60 ms

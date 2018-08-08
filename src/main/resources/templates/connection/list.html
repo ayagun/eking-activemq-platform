@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/fresh-bootstrap-table.css}">
+    <title>连接管理</title>
+</head>
+<body>
+<div id="myManu" ></div>
+<div class="container">
+   <div class="panel panel-default">
+       <div class="panel-body">
+           <table id="table"></table>
+       </div>
+   </div>
+</div>
+
+<!-- 查询的模态对话框 -->
+<div id="detailModal" class="modal fade"  role="dialog"   aria-hidden=true>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title">
+                    <i class="icon-pencil"></i>
+                    <span id="lblAddTitle" style="font-weight:bold">连接详情</span>
+                </h4>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <form  id ='addForm' class="bs-example bs-example-form" role = "form">
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">ID</i></span>
+                        <input type = "text" class=" form-control" name="id" id="id" disabled>
+                    </div>
+                    <div class = "input-group">
+                        <span class = "input-group-addon"><i class="icon-th">IP</i></span>
+                        <input type = "text" class = "form-control" name="connectionIp" id="connectionIp" disabled>
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">状态</i></span>
+                        <input type = "text"  class=" form-control"  name="connectionStatus" id="connectionStatus" disabled>
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">客户端</i></span>
+                        <input type = "text"  class=" form-control" name="userName" id="userName" disabled>
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th" >创建时间</i></span>
+                        <input type = "text"  class=" form-control" name="createTime" id="createTime" disabled>
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">更新时间</i></span>
+                        <input type = "text"  class=" form-control"  name="updateTime" id="updateTime"  disabled>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-info">
+                <button type="submit" class="btn btn-primary"  data-dismiss="modal">确定</button>
+                <button type="button" class="btn green" data-dismiss="modal">取消</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<script th:src="@{/static/js/bootstrap.js}"></script>
+<script th:src="@{/static/js/bootstrap-table.js}"></script>
+<script th:src="@{/static/js/common.js}"></script>
+<script th:src="@{/static/js/connection.js}"></script>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eking.activemq.dao.ItConnectionMapper">
+  <resultMap id="BaseResultMap" type="com.eking.activemq.entity.ItConnection">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="connection_ip" jdbcType="VARCHAR" property="connectionIp" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="connection_status" jdbcType="VARCHAR" property="connectionStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from it_connection
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.eking.activemq.entity.ItConnection">
+    insert into it_connection (id, connection_ip, user_name, 
+      connection_status, create_time, update_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{connectionIp,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{connectionStatus,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.eking.activemq.entity.ItConnection">
+    update it_connection
+    set connection_ip = #{connectionIp,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      connection_status = #{connectionStatus,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, connection_ip, user_name, connection_status, create_time, update_time
+    from it_connection
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, connection_ip, user_name, connection_status, create_time, update_time
+    from it_connection
+  </select>
+</mapper>

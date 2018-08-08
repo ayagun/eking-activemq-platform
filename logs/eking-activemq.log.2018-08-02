@@ -1,0 +1,943 @@
+2018-08-02 08:58:53,157  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 5352 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 08:58:53,198  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 08:58:55,496  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fc07141: startup date [Thu Aug 02 08:58:55 CST 2018]; root of context hierarchy
+2018-08-02 08:58:55,556  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-02 08:59:02,968  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$13e46da3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 08:59:04,332  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 08:59:04,880  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 9723 ms
+2018-08-02 08:59:05,363  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 08:59:05,375  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 08:59:05,377  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 08:59:05,378  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 08:59:05,379  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 08:59:11,812  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 08:59:11,851  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 08:59:12,066  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-02 08:59:12,074  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 08:59:12,081  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-02 08:59:12,362  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-02 08:59:12,816  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 08:59:13,797  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 08:59:16,550  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fc07141: startup date [Thu Aug 02 08:58:55 CST 2018]; root of context hierarchy
+2018-08-02 08:59:16,826  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-02 08:59:16,829  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-02 08:59:16,830  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-02 08:59:16,831  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-02 08:59:16,833  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-02 08:59:16,844  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-02 08:59:16,846  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-02 08:59:16,846  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-02 08:59:16,847  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-02 08:59:16,848  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-02 08:59:16,850  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-02 08:59:16,854  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-02 08:59:16,862  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-02 08:59:16,864  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-02 08:59:16,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-02 08:59:16,866  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-02 08:59:16,867  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-02 08:59:16,869  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 08:59:16,869  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-02 08:59:16,885  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-02 08:59:16,887  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-02 08:59:16,890  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-02 08:59:16,891  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 08:59:16,897  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 08:59:16,899  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 08:59:17,018  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 08:59:17,019  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 08:59:17,170  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 08:59:17,281  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-02 08:59:19,271  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-02 08:59:19,447  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-02 08:59:19,704  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-02 08:59:19,731  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 29.083 seconds (JVM running for 39.921)
+2018-08-02 09:29:22,425  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 09:29:22,551  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 125 ms
+2018-08-02 10:30:49,957  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 6960 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 10:30:49,960  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 10:30:50,246  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-02 10:30:50,319  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c4b2a56: startup date [Thu Aug 02 10:30:50 CST 2018]; root of context hierarchy
+2018-08-02 10:30:52,450  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$87d4c948] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 10:30:52,847  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 10:30:52,935  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2621 ms
+2018-08-02 10:30:53,061  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 10:30:53,065  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 10:30:53,066  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 10:30:53,066  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 10:30:53,066  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 10:30:58,538  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 10:30:58,578  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 10:30:58,805  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-02 10:30:58,811  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 10:30:58,818  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-02 10:30:58,946  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-02 10:30:59,238  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 10:31:00,102  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 10:31:01,288  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c4b2a56: startup date [Thu Aug 02 10:30:50 CST 2018]; root of context hierarchy
+2018-08-02 10:31:01,494  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-02 10:31:01,496  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-02 10:31:01,497  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-02 10:31:01,499  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-02 10:31:01,500  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-02 10:31:01,507  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-02 10:31:01,507  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-02 10:31:01,508  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-02 10:31:01,509  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-02 10:31:01,510  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-02 10:31:01,511  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-02 10:31:01,511  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-02 10:31:01,516  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-02 10:31:01,517  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-02 10:31:01,517  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-02 10:31:01,518  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-02 10:31:01,519  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 10:31:01,519  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-02 10:31:01,520  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-02 10:31:01,528  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-02 10:31:01,529  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-02 10:31:01,530  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 10:31:01,530  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-02 10:31:01,535  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 10:31:01,536  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 10:31:01,607  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 10:31:01,607  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 10:31:01,689  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 10:31:01,787  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-02 10:31:02,782  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-02 10:31:02,893  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-02 10:31:02,987  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-02 10:31:02,996  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 13.716 seconds (JVM running for 15.31)
+2018-08-02 10:32:12,725  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 10:32:12,816  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 90 ms
+2018-08-02 14:15:52,844  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 8120 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 14:15:52,847  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 14:15:53,152  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318cc17: startup date [Thu Aug 02 14:15:53 CST 2018]; root of context hierarchy
+2018-08-02 14:15:53,180  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-02 14:15:54,712  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3406cfd8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 14:15:54,992  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 14:15:55,075  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1927 ms
+2018-08-02 14:15:55,183  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 14:15:55,186  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 14:15:55,187  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 14:15:55,187  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 14:15:55,187  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 14:16:00,248  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 14:16:00,294  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 14:16:00,493  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-02 14:16:00,498  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 14:16:00,504  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-02 14:16:00,636  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-02 14:16:01,003  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 14:16:01,917  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 14:16:02,592  WARN AnnotationConfigEmbeddedWebApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerService' defined in file [D:\idea_project\eking-activemq-platform\target\classes\com\eking\activemq\service\ConsumerService.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Could not register JMS listener endpoint on [public void com.eking.activemq.service.ConsumerService.receiveTopic11(java.lang.String)], no JmsListenerContainerFactory with id 'topicListenerFactory' was found in the application context; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'topicListenerFactory' available
+2018-08-02 14:16:02,593  INFO LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 14:16:02,628  INFO AutoConfigurationReportLoggingInitializer:101 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-08-02 14:16:02,898 ERROR LoggingFailureAnalysisReporter:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'topicListenerFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'topicListenerFactory' in your configuration.
+
+2018-08-02 14:17:15,257  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 5540 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 14:17:15,261  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 14:17:15,733  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ae390b3: startup date [Thu Aug 02 14:17:15 CST 2018]; root of context hierarchy
+2018-08-02 14:17:15,951  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-02 14:17:18,987  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$be1769b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 14:17:19,634  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 14:17:19,866  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4138 ms
+2018-08-02 14:17:20,158  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 14:17:20,167  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 14:17:20,169  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 14:17:20,169  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 14:17:20,170  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 14:17:25,523  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 14:17:25,566  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 14:17:25,801  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-02 14:17:25,807  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 14:17:25,813  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-02 14:17:25,951  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-02 14:17:26,274  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 14:17:27,122  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 14:17:28,704  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ae390b3: startup date [Thu Aug 02 14:17:15 CST 2018]; root of context hierarchy
+2018-08-02 14:17:28,899  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-02 14:17:28,902  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-02 14:17:28,903  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-02 14:17:28,904  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-02 14:17:28,906  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-02 14:17:28,915  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-02 14:17:28,916  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-02 14:17:28,916  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-02 14:17:28,917  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-02 14:17:28,918  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-02 14:17:28,919  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-02 14:17:28,919  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-02 14:17:28,925  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-02 14:17:28,926  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-02 14:17:28,927  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-02 14:17:28,927  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-02 14:17:28,928  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-02 14:17:28,929  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 14:17:28,929  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-02 14:17:28,937  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-02 14:17:28,938  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-02 14:17:28,939  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-02 14:17:28,939  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 14:17:28,944  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 14:17:28,944  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 14:17:29,020  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 14:17:29,021  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 14:17:29,135  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 14:17:29,286  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-02 14:17:30,758  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-02 14:17:30,920  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-02 14:17:30,942  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-08-02 14:17:32,526  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-02 14:17:32,545  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 17.841 seconds (JVM running for 19.947)
+2018-08-02 14:19:13,468  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 14:19:13,551  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 82 ms
+2018-08-02 14:59:00,805  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: The Consumer is closed
+2018-08-02 14:59:00,837  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:1,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:1,started=false} on IOException: Connection reset
+2018-08-02 14:59:02,198  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'IN.FSS2.FIDS' - trying to recover. Cause: The Session is closed
+2018-08-02 14:59:02,210  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:2,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:2,started=false} on IOException: Connection reset
+2018-08-02 14:59:21,846 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'mytest.queue1' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection timed out: connect
+2018-08-02 14:59:22,585  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 14:59:27,618  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 14:59:32,803  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 14:59:33,530  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 14:59:39,910  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 14:59:40,648  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 14:59:46,523  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 14:59:46,858  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 14:59:51,938  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 14:59:52,212  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 14:59:57,284  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 14:59:57,601  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:02,672  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:02,962  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:08,040  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:08,333  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:13,417  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:13,716  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:18,791  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:19,088  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:24,170  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:24,461  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:29,541  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:29,855  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:34,932  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:35,279  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:40,369  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:40,662  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:45,739  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:46,039  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:51,111  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:51,384  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:00:56,454  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:00:56,750  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:01,833  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:02,312  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:07,452  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:07,750  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:12,825  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:13,117  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:18,194  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:18,495  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:23,583  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:25,091  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:30,184  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:30,497  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:35,571  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:35,870  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:40,944  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:41,235  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:46,311  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:46,631  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:51,703  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:52,028  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:01:57,112  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:01:57,506  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:02,608  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:02,909  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:07,983  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:08,281  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:13,358  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:13,677  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:18,749  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:19,042  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:24,116  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:24,408  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:29,488  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:29,798  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:34,916  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:35,211  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:40,284  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:40,582  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:45,666  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:45,962  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:51,037  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:51,334  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:02:56,408  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:02:56,712  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:01,788  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:02,090  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:07,165  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:07,465  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:12,547  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:12,834  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:17,909  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:18,202  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:23,276  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:23,575  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:28,651  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:28,947  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:34,025  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:34,338  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:39,414  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:39,712  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:44,788  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:45,103  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:50,177  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:50,635  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:03:55,740  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:03:56,078  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:01,168  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:01,459  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:06,533  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:06,825  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:11,897  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:12,196  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:17,268  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:17,562  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:22,635  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:22,917  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:27,988  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:28,297  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:33,450  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:33,793  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:38,894  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:39,219  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:44,295  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:44,603  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:49,704  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:50,043  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:04:55,114  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:04:55,411  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:00,485  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:00,784  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:05,867  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:06,166  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:11,237  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:11,538  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:16,612  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:16,927  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:22,015  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:22,317  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:27,393  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:27,684  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:32,760  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:33,062  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:38,136  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:38,430  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:43,515  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:43,809  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:48,883  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:49,179  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:54,259  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:54,544  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:05:59,616  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:05:59,913  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:04,988  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:05,302  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:10,379  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:10,682  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:15,775  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:16,055  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:21,126  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:21,430  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:26,503  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:26,795  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:31,875  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:32,194  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:37,267  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:37,565  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:42,636  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:42,928  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:48,004  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:48,321  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:53,396  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:53,694  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:06:58,792  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:06:59,287  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:04,378  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:04,673  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:09,760  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:10,036  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:15,309  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:15,634  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:20,886  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:21,205  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:26,445  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:26,746  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:31,834  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:32,127  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:37,205  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:37,507  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:42,584  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:42,872  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:47,951  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:48,258  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:53,341  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:53,633  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:07:58,710  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:07:59,004  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:04,084  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:04,373  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:09,452  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:09,747  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:14,825  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:14,826  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:19,904  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:20,224  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:25,304  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:25,597  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:30,675  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:37,506  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:42,576  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:42,866  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:47,940  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:48,239  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:53,315  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:53,619  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:08:58,690  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:08:58,994  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:04,068  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:04,369  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:09,439  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:09,730  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:14,805  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:15,136  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:20,216  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:20,505  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:25,579  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:25,871  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:30,945  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:31,251  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:36,325  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:36,620  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:41,692  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:41,978  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:47,050  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:47,341  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:52,414  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:52,717  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:09:57,812  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:09:58,114  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:03,188  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:03,490  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:08,561  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:08,856  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:13,927  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:14,284  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:19,356  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:19,650  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:24,723  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:25,020  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:30,093  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:30,393  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:35,472  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:35,763  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:40,837  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:41,132  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:46,213  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:46,513  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:51,588  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:51,915  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:10:56,987  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:10:57,286  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:02,361  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:02,662  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:07,735  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:08,038  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:13,118  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:13,416  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:18,493  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:18,917  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:24,210  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:24,533  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:29,613  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:29,950  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:35,040  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:35,331  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:40,401  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:40,692  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:45,768  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:46,054  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:51,126  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:11:51,411  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:11:56,485  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:12:14,792  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:12:23,472  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:12:40,359  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:12:48,775  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:00,956  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:06,030  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:06,332  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:11,408  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:11,717  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:16,787  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:17,083  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:22,156  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:22,449  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:27,525  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:27,821  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:32,896  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:33,200  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:38,095  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'IN.FSS2.FIDS' - trying to recover. Cause: The Session is closed
+2018-08-02 15:13:38,125  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:101,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:100,started=false} on IOException: null
+2018-08-02 15:13:38,127  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:103,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:102,started=false} on IOException: null
+2018-08-02 15:13:38,086  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:4,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:3,started=false} on IOException: null
+2018-08-02 15:13:38,087  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:102,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:101,started=false} on IOException: null
+2018-08-02 15:13:38,174  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:115,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:114,started=false} on IOException: null
+2018-08-02 15:13:38,182  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:100,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:99,started=false} on IOException: null
+2018-08-02 15:13:38,230  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:130,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:129,started=false} on IOException: null
+2018-08-02 15:13:38,233  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:122,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:121,started=false} on IOException: null
+2018-08-02 15:13:38,234  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:125,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:124,started=false} on IOException: null
+2018-08-02 15:13:38,235  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:120,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:119,started=false} on IOException: null
+2018-08-02 15:13:38,237  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:106,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:105,started=false} on IOException: null
+2018-08-02 15:13:38,237  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:105,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:104,started=false} on IOException: null
+2018-08-02 15:13:38,238  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:104,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:103,started=false} on IOException: null
+2018-08-02 15:13:38,239  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:107,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:106,started=false} on IOException: null
+2018-08-02 15:13:38,239  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:123,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:122,started=false} on IOException: null
+2018-08-02 15:13:38,251  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:127,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:126,started=false} on IOException: null
+2018-08-02 15:13:38,252  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:135,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:134,started=false} on IOException: null
+2018-08-02 15:13:38,254  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:117,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:116,started=false} on IOException: null
+2018-08-02 15:13:38,257  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:110,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:109,started=false} on IOException: null
+2018-08-02 15:13:38,261  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:111,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:110,started=false} on IOException: null
+2018-08-02 15:13:38,262  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:112,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:111,started=false} on IOException: null
+2018-08-02 15:13:38,263  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:133,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:132,started=false} on IOException: null
+2018-08-02 15:13:38,264  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:118,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:117,started=false} on IOException: null
+2018-08-02 15:13:38,265  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:109,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:108,started=false} on IOException: null
+2018-08-02 15:13:38,265  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:126,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:125,started=false} on IOException: null
+2018-08-02 15:13:38,267  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:108,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:107,started=false} on IOException: null
+2018-08-02 15:13:38,270  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:132,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:131,started=false} on IOException: null
+2018-08-02 15:13:38,270  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:113,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:112,started=false} on IOException: null
+2018-08-02 15:13:38,272  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:116,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:115,started=false} on IOException: null
+2018-08-02 15:13:38,273  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:114,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:113,started=false} on IOException: null
+2018-08-02 15:13:38,275  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:38,278  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:119,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:118,started=false} on IOException: null
+2018-08-02 15:13:38,279  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:121,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:120,started=false} on IOException: null
+2018-08-02 15:13:38,279  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:128,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:127,started=false} on IOException: null
+2018-08-02 15:13:38,280  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:136,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:135,started=false} on IOException: null
+2018-08-02 15:13:38,281  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:124,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:123,started=false} on IOException: null
+2018-08-02 15:13:38,281  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:129,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:128,started=false} on IOException: null
+2018-08-02 15:13:38,284  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:134,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:133,started=false} on IOException: null
+2018-08-02 15:13:38,285  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:131,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:130,started=false} on IOException: null
+2018-08-02 15:13:38,284  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:137,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:136,started=false} on IOException: null
+2018-08-02 15:13:38,391  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:144,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:143,started=false} on IOException: null
+2018-08-02 15:13:38,392  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:143,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:142,started=false} on IOException: null
+2018-08-02 15:13:38,392  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:145,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:144,started=false} on IOException: null
+2018-08-02 15:13:38,406  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:146,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:145,started=false} on IOException: null
+2018-08-02 15:13:38,407  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:147,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:146,started=false} on IOException: null
+2018-08-02 15:13:38,412  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:148,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:147,started=false} on IOException: null
+2018-08-02 15:13:38,808  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:138,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:137,started=false} on IOException: null
+2018-08-02 15:13:38,836  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:139,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:138,started=false} on IOException: null
+2018-08-02 15:13:39,318 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:13:40,021  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:142,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:141,started=false} on IOException: null
+2018-08-02 15:13:40,323  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:141,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:140,started=false} on IOException: Connection reset
+2018-08-02 15:13:40,530 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'mytest.queue1' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:13:42,208  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-1:140,clientId=ID:PC-20160821UMQQ-61110-1533190651067-0:139,started=false} on IOException: null
+2018-08-02 15:13:44,878  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:45,874  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:50,966  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:51,280  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:13:56,368  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:13:56,765  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:01,857  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:02,176  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:07,255  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:07,565  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:12,645  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:12,970  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:18,051  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:18,367  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:23,450  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:23,757  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:28,838  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:29,145  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:34,226  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:34,534  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:39,618  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:39,945  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:45,030  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:45,350  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:50,432  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:50,745  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:14:55,833  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:14:56,204  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:01,288  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:01,612  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:06,696  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:07,006  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:12,095  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:12,417  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:17,497  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:17,817  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:22,898  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:23,211  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:28,293  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:28,606  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:33,689  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:34,002  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:39,101  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:39,416  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:44,504  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:44,822  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:49,904  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:50,270  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:15:55,349  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:15:55,639  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:00,717  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:01,171  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:06,315  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:06,660  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:11,765  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:12,212  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:17,289  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:17,600  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:22,681  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:22,990  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:28,074  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:28,391  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:33,546  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:34,036  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:39,120  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:39,445  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:44,530  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:44,855  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:49,939  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:50,260  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:16:55,353  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:16:55,658  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:00,742  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:01,126  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:06,248  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:06,555  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:11,635  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:12,137  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:17,223  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:17,528  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:22,613  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:22,928  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:28,017  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:28,372  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:33,456  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:33,768  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:38,867  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:39,174  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:44,261  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:44,573  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:49,655  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:49,969  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:17:55,055  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:17:55,368  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:00,481  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:00,783  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:05,865  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:06,214  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:11,376  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:11,377  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:16,466  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:16,920  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:22,001  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:22,312  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:27,476  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:27,932  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:33,047  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:33,519  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:38,966  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:39,271  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:44,352  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:44,666  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:49,751  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:50,063  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:18:55,146  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:18:55,458  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:00,544  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:00,851  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:05,940  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:06,260  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:11,343  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:11,651  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:16,732  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:17,031  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:22,117  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:22,430  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:27,508  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:27,827  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:32,927  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:33,259  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:38,342  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:38,664  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:43,754  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:44,080  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:49,169  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:49,531  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:19:54,614  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:19:55,012  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:00,104  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:00,417  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:05,502  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:05,812  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:10,892  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:11,203  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:16,285  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:16,593  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:21,685  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:22,007  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:27,092  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:27,441  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:32,522  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:32,826  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:37,910  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:38,219  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:43,303  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:43,612  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:48,696  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:48,998  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:54,085  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:54,395  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:20:59,484  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:20:59,813  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:04,895  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:05,199  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:10,281  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:10,602  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:15,698  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:16,025  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:21,138  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:21,489  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:26,601  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:26,906  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:31,996  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:32,311  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:37,738  INFO AnnotationConfigEmbeddedWebApplicationContext:987 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ae390b3: startup date [Thu Aug 02 14:17:15 CST 2018]; root of context hierarchy
+2018-08-02 15:21:37,742  INFO DefaultLifecycleProcessor:358 - Stopping beans in phase 2147483647
+2018-08-02 15:21:37,743  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'mytest.queue1' - trying to recover. Cause: user[admin] No authority to receive messages[mytest.queue1]
+2018-08-02 15:21:38,029  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:21:38,744  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2018-08-02 15:21:44,994  INFO LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 15:21:47,362  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 5540 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 15:21:47,362  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 15:21:47,394  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b5f6252: startup date [Thu Aug 02 15:21:47 CST 2018]; root of context hierarchy
+2018-08-02 15:21:49,836  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$be1769b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 15:21:50,093  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 15:21:50,133  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2739 ms
+2018-08-02 15:21:50,248  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 15:21:50,250  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 15:21:50,250  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 15:21:50,250  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 15:21:50,251  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 15:21:55,240  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 15:21:55,240  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 15:21:55,318  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 15:21:55,359  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 15:21:56,159  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b5f6252: startup date [Thu Aug 02 15:21:47 CST 2018]; root of context hierarchy
+2018-08-02 15:21:56,208  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-02 15:21:56,210  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-02 15:21:56,211  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:21:56,212  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-02 15:21:56,214  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-02 15:21:56,220  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-02 15:21:56,222  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-02 15:21:56,222  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-02 15:21:56,223  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-02 15:21:56,224  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-02 15:21:56,224  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:21:56,225  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-02 15:21:56,231  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-02 15:21:56,232  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-02 15:21:56,233  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-02 15:21:56,234  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-02 15:21:56,235  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:21:56,236  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 15:21:56,236  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-02 15:21:56,244  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-02 15:21:56,245  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-02 15:21:56,246  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:21:56,247  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 15:21:56,252  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 15:21:56,252  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 15:21:56,287  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:21:56,288  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:21:56,342  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:21:56,398  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-02 15:21:56,852  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-02 15:21:57,009  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-02 15:21:57,023  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-08-02 15:21:57,408  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-02 15:21:57,416  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 10.328 seconds (JVM running for 3884.64)
+2018-08-02 15:29:46,768  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 15:29:46,791  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-08-02 15:40:05,094  WARN DefaultMessageListenerContainer:880 - Setup of JMS message listener invoker failed for destination 'IN.FSS2.FIDS' - trying to recover. Cause: The Consumer is closed
+2018-08-02 15:40:05,094  INFO PooledConnectionFactory:115 - Expiring connection ActiveMQConnection {id=ID:PC-20160821UMQQ-61110-1533190651067-3:1,clientId=ID:PC-20160821UMQQ-61110-1533190651067-2:1,started=false} on IOException: null
+2018-08-02 15:40:06,314 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:12,535 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:18,761 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:24,959 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:31,178 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:37,394 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:43,626 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:49,901 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:40:56,124 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:41:02,330 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=9, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:41:08,543 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=10, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:41:14,748 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=11, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:41:26,156 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=12, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:41:38,603 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=13, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:41:50,015 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=14, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:42:01,394 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=15, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:42:12,794 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=16, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:42:23,594 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=17, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:42:29,804 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=18, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:42:36,017 ERROR DefaultMessageListenerContainer:947 - Could not refresh JMS Connection for destination 'IN.FSS2.FIDS' - retrying using FixedBackOff{interval=5000, currentAttempts=19, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.102.53:61608. Reason: java.net.ConnectException: Connection refused: connect
+2018-08-02 15:42:41,697  INFO DefaultMessageListenerContainer:931 - Successfully refreshed JMS Connection
+2018-08-02 15:48:58,617  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 4304 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 15:48:58,620  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 15:48:59,094  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@241c2fbf: startup date [Thu Aug 02 15:48:59 CST 2018]; root of context hierarchy
+2018-08-02 15:48:59,256  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-02 15:49:00,962  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8822f1cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 15:49:01,391  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 15:49:01,520  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2431 ms
+2018-08-02 15:49:01,709  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 15:49:01,715  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 15:49:01,716  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 15:49:01,716  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 15:49:01,717  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 15:49:03,780  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 15:49:03,840  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 15:49:04,074  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-02 15:49:04,080  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 15:49:04,087  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-02 15:49:04,228  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-02 15:49:04,566  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 15:49:05,525  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 15:49:07,027  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@241c2fbf: startup date [Thu Aug 02 15:48:59 CST 2018]; root of context hierarchy
+2018-08-02 15:49:07,189  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-02 15:49:07,191  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-02 15:49:07,192  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-02 15:49:07,193  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:49:07,194  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-02 15:49:07,201  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-02 15:49:07,202  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-02 15:49:07,203  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-02 15:49:07,203  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-02 15:49:07,204  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-02 15:49:07,205  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-02 15:49:07,205  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:49:07,210  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-02 15:49:07,211  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-02 15:49:07,212  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-02 15:49:07,212  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-02 15:49:07,213  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 15:49:07,214  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:49:07,215  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-02 15:49:07,222  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-02 15:49:07,223  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-02 15:49:07,224  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 15:49:07,225  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-02 15:49:07,229  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 15:49:07,230  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 15:49:07,335  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:49:07,336  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:49:07,453  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:49:07,562  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-02 15:49:09,256  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-02 15:49:09,426  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-02 15:49:09,446  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-08-02 15:49:09,620  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-02 15:49:09,635  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 11.969 seconds (JVM running for 14.725)
+2018-08-02 15:49:40,189  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 15:49:40,265  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 75 ms
+2018-08-02 17:35:09,238  INFO EkingActivemqApplication:48 - Starting EkingActivemqApplication on PC-20160821UMQQ with PID 2644 (D:\idea_project\eking-activemq-platform\target\classes started by Administrator in D:\idea_project\eking-activemq-platform)
+2018-08-02 17:35:09,241  INFO EkingActivemqApplication:637 - No active profile set, falling back to default profiles: default
+2018-08-02 17:35:09,728  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2018-08-02 17:35:10,320  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78ff6b4c: startup date [Thu Aug 02 17:35:10 CST 2018]; root of context hierarchy
+2018-08-02 17:35:15,122  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7294b674] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-02 17:35:18,201  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8181 (http)
+2018-08-02 17:35:18,480  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 8165 ms
+2018-08-02 17:35:18,876  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-02 17:35:18,880  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 17:35:18,880  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 17:35:18,881  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 17:35:18,881  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 17:35:22,617  INFO LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-02 17:35:22,658  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-02 17:35:22,780  INFO Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-02 17:35:22,782  INFO Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 17:35:22,791  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-02 17:35:23,074  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-02 17:35:23,520  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-02 17:35:24,230  INFO LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-02 17:35:27,605  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78ff6b4c: startup date [Thu Aug 02 17:35:10 CST 2018]; root of context hierarchy
+2018-08-02 17:35:27,835  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ConnectionController.list(org.springframework.ui.ModelMap)
+2018-08-02 17:35:27,839  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/{connectionId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItConnection> com.eking.activemq.controller.ConnectionController.detail(int)
+2018-08-02 17:35:27,839  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItConnection>> com.eking.activemq.controller.ConnectionController.ajaxList(com.eking.activemq.entity.ItConnection)
+2018-08-02 17:35:27,840  INFO RequestMappingHandlerMapping:543 - Mapped "{[/connection/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ConnectionController.ajaxPage(com.eking.activemq.entity.ItConnection,java.lang.Integer,java.lang.Integer)
+2018-08-02 17:35:27,842  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.IndexController.index(org.springframework.ui.ModelMap)
+2018-08-02 17:35:27,854  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItQueueController.index(org.springframework.ui.ModelMap)
+2018-08-02 17:35:27,855  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.add(com.eking.activemq.entity.ItQueue)
+2018-08-02 17:35:27,855  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItQueueController.delete(int)
+2018-08-02 17:35:27,856  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.detail(int)
+2018-08-02 17:35:27,857  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItQueue>> com.eking.activemq.controller.ItQueueController.ajaxList(com.eking.activemq.entity.ItQueue)
+2018-08-02 17:35:27,857  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItQueueController.ajaxPage(com.eking.activemq.entity.ItQueue,java.lang.Integer,java.lang.Integer)
+2018-08-02 17:35:27,858  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itQueue/queryQueueByUserId]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItQueue> com.eking.activemq.controller.ItQueueController.queryQueueByUserId(int)
+2018-08-02 17:35:27,864  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.ItUserController.index(org.springframework.ui.ModelMap)
+2018-08-02 17:35:27,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/add],methods=[POST]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.add(com.eking.activemq.entity.ItUser)
+2018-08-02 17:35:27,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/delete]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.delete(int)
+2018-08-02 17:35:28,027  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/{itUserId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.ItUser> com.eking.activemq.controller.ItUserController.detail(int)
+2018-08-02 17:35:28,028  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.ItUserController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 17:35:28,028  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.ItUserController.ajaxPage(com.eking.activemq.entity.ItUser,java.lang.Integer,java.lang.Integer)
+2018-08-02 17:35:28,029  INFO RequestMappingHandlerMapping:543 - Mapped "{[/itUser/setQueue]}" onto public com.eking.activemq.dto.ActiveMQResult com.eking.activemq.controller.ItUserController.setQueue(int,int[])
+2018-08-02 17:35:28,037  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/list],methods=[GET]}" onto public java.lang.String com.eking.activemq.controller.MessageLogController.list(org.springframework.ui.ModelMap)
+2018-08-02 17:35:28,038  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/{messageId}/detail],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.entity.MessageLog> com.eking.activemq.controller.MessageLogController.detail(int)
+2018-08-02 17:35:28,039  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxList],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<java.util.List<com.eking.activemq.entity.ItUser>> com.eking.activemq.controller.MessageLogController.ajaxList(com.eking.activemq.entity.ItUser)
+2018-08-02 17:35:28,040  INFO RequestMappingHandlerMapping:543 - Mapped "{[/message/ajaxPage],methods=[GET]}" onto public com.eking.activemq.dto.ActiveMQResult<com.eking.activemq.dto.Pager> com.eking.activemq.controller.MessageLogController.ajaxPage(com.eking.activemq.entity.MessageLog,java.lang.Integer,java.lang.Integer)
+2018-08-02 17:35:28,127  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 17:35:28,127  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 17:35:28,232  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 17:35:28,232  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 17:35:28,295  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 17:35:28,628  WARN TemplateMode:150 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-02 17:35:30,080  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-08-02 17:35:30,170  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-08-02 17:35:30,252  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-08-02 17:35:30,439  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8181 (http)
+2018-08-02 17:35:30,447  INFO EkingActivemqApplication:57 - Started EkingActivemqApplication in 22.026 seconds (JVM running for 25.511)
+2018-08-02 17:35:34,666  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 17:35:35,169  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 502 ms

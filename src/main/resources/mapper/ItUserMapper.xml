@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eking.activemq.dao.ItUserMapper">
+  <resultMap id="BaseResultMap" type="com.eking.activemq.entity.ItUser">
+    <id column="USER_ID" jdbcType="INTEGER" property="userId" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="PASSWD" jdbcType="VARCHAR" property="passwd" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="BIRTHDAY" jdbcType="DATE" property="birthday" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="HOBBY" jdbcType="VARCHAR" property="hobby" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from it_user
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.eking.activemq.entity.ItUser">
+    insert into it_user (USER_ID, USER_NAME, PASSWD, 
+      CREATE_TIME, ADDRESS, BIRTHDAY, 
+      EMAIL, PHONE, HOBBY
+      )
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{passwd,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, 
+      #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{hobby,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.eking.activemq.entity.ItUser">
+    update it_user
+    set USER_NAME = #{userName,jdbcType=VARCHAR},
+      PASSWD = #{passwd,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      BIRTHDAY = #{birthday,jdbcType=DATE},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      HOBBY = #{hobby,jdbcType=VARCHAR}
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select USER_ID, USER_NAME, PASSWD, CREATE_TIME, ADDRESS, BIRTHDAY, EMAIL, PHONE, 
+    HOBBY
+    from it_user
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
+    select USER_ID, USER_NAME, PASSWD, CREATE_TIME, ADDRESS, BIRTHDAY, EMAIL, PHONE,
+    HOBBY
+    from it_user
+    where USER_NAME = #{userName,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select USER_ID, USER_NAME, PASSWD, CREATE_TIME, ADDRESS, BIRTHDAY, EMAIL, PHONE, HOBBY
+    from it_user
+  </select>
+
+  <select id="selectByUser" resultMap="BaseResultMap" parameterType="HashMap">
+    select USER_ID, USER_NAME, PASSWD, CREATE_TIME, ADDRESS, BIRTHDAY, EMAIL, PHONE, HOBBY
+    from it_user
+    <if test="userName != null and userName !='' ">
+      <![CDATA[ USER_NAME like CONCAT(CONCAT('%', #{userName}),'%')]]>
+    </if>
+  </select>
+
+  <delete id="deleteUserQueueByUserId" parameterType="java.lang.Integer">
+    delete from it_user_queue
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="addUserQueueByUserIdAndQueueId" parameterType="java.lang.Integer">
+    insert into it_user_queue(user_id, queue_id)
+    values (#{userId}, #{queueId})
+  </insert>
+
+</mapper>

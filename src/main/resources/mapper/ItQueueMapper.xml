@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eking.activemq.dao.ItQueueMapper">
+  <resultMap id="BaseResultMap" type="com.eking.activemq.entity.ItQueue">
+    <id column="queue_id" jdbcType="INTEGER" property="queueId" />
+    <result column="queue_name" jdbcType="VARCHAR" property="queueName" />
+    <result column="permission_type" jdbcType="VARCHAR" property="permissionType" />
+    <result column="queue_describe" jdbcType="VARCHAR" property="queueDescribe" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_person" jdbcType="VARCHAR" property="createPerson" />
+    <result column="user_id" jdbcType="INTEGER" property="userId"/>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from it_queue
+    where queue_id = #{queueId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.eking.activemq.entity.ItQueue">
+    insert into it_queue (queue_id, queue_name, permission_type, 
+      queue_describe, create_time, create_person
+      )
+    values (#{queueId,jdbcType=INTEGER}, #{queueName,jdbcType=VARCHAR}, #{permissionType,jdbcType=VARCHAR}, 
+      #{queueDescribe,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createPerson,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.eking.activemq.entity.ItQueue">
+    update it_queue
+    set queue_name = #{queueName,jdbcType=VARCHAR},
+      permission_type = #{permissionType,jdbcType=VARCHAR},
+      queue_describe = #{queueDescribe,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_person = #{createPerson,jdbcType=VARCHAR}
+    where queue_id = #{queueId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select queue_id, queue_name, permission_type, queue_describe, create_time, create_person
+    from it_queue
+    where queue_id = #{queueId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
+    select queue_id, queue_name, permission_type, queue_describe, create_time, create_person
+    from it_queue
+    where queue_name = #{queueName,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select queue_id, queue_name, permission_type, queue_describe, create_time, create_person
+    from it_queue
+  </select>
+
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  SELECT * from it_queue iq
+  LEFT JOIN it_user_queue iuq ON iq.queue_id=iuq.queue_id
+  and iuq.user_id=#{userId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

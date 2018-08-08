@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/fresh-bootstrap-table.css}">
+    <title>目的地管理</title>
+</head>
+<body>
+<div id="myManu" ></div>
+<div class="container">
+   <div class="panel panel-default">
+       <div class="panel-body">
+           <!-- 按钮触发模态框 -->
+           <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal">添加消息权限</button>
+           <table id="table"></table>
+       </div>
+   </div>
+</div>
+<!-- 查询的模态对话框 -->
+<div id="addModal" class="modal fade"  role="dialog"   aria-hidden=true>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title">
+                    <i class="icon-pencil"></i>
+                    <span id="lblAddTitle" style="font-weight:bold">添加</span>
+                </h4>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <form  id ='addForm' class="bs-example bs-example-form" role = "form">
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">目的地</i></span>
+                        <input type = "text" class=" form-control" name="queueName" id="queueName" placeholder="目的地">
+                    </div>
+                    <div class = "input-group">
+                        <span class = "input-group-addon"><i class="icon-th">权限类型</i></span>
+                        <input type = "text" class = "form-control"  placeholder="权限类型" name="permissionType" id="permissionType">
+                    </div>
+
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">描述</i></span>
+                        <input type = "text"  class=" form-control" name="queueDescribe" id="queueDescribe" placeholder="描述">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center"><i class="icon-th">创建者</i></span>
+                        <input type = "text"  class=" form-control"  name="createPerson" id="createPerson"  placeholder="创建者" >
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-info">
+                <button type="submit" class="btn btn-primary"  onclick =add()>确定</button>
+                <button type="button" class="btn green" data-dismiss="modal">取消</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<script th:src="@{/static/js/bootstrap.js}"></script>
+<script th:src="@{/static/js/bootstrap-table.js}"></script>
+<script th:src="@{/static/js/common.js}"></script>
+<script th:src="@{/static/js/itqueue.js}"></script>
+</html>
